@@ -21,10 +21,12 @@ client.on('ready', () => {
      'requiredrole'
   ]
 
+
   // Initialize WOKCommands with specific folders and MongoDB
   new WOKCommands(client, {
     commandsDir: 'commands',
     featureDir: 'features',
+    testServers: ['812371826167513149'],
     messagesPath,
     showWarns: false, // Show start up warnings
     disabledDefaultCommands
