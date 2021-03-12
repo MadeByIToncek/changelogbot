@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/MadeByIToncek/changelogbot#readme",
   "dependencies": {
-    "wokcommands": "^1.2.8"
+    "@octokit/core": "^3.3.0",
+    "querystring": "^0.2.1",
+    "request": "^2.88.2",
+    "wokcommands": "^1.2.8",
+    "xmlhttprequest": "^1.8.0"
   }
 }
