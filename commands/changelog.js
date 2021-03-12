@@ -9,6 +9,7 @@ module.exports = {
     category: "Changelog",
     permissions: ['MANAGE_CHANNELS'],
     minArgs: 2,
+    guildOnly: true,
     expectedArgs: '<GithubUserName> <Repository>',
     callback: ({ client, message, args }) => {
         var options = {
@@ -20,7 +21,7 @@ module.exports = {
         request(options, function (error, response, body) {
         console.error('error:', error); // Print the error if one occurred
         console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-        console.log(info)
+        var info = JSON.parse(body)
         client.channels.cache.get(process.env.DISCORD_NOTIFY_CHANNEL).send("**" + info.name + "**  @  **" + info.tag_name + "** \n```diff\n" + info.body + "```");
 });
 }
