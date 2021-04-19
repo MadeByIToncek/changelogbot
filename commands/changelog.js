@@ -24,8 +24,8 @@ module.exports = {
         console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
         var info = JSON.parse(body)
         // client.channels.cache.get(process.env.DISCORD_NOTIFY_CHANNEL).send("**" + info.name + "**  @  **" + info.tag_name + "** \n```diff\n" + info.body + "```");
-        const id = '814161343631720489';
-        const token = 'SJMLZr6yM9KklodSe9GiY0qgzEQh3CH7IaVv7wx1Q7lJie5Jvz5EHlmx36pw_UJt4AG2';
+        const id = process.env.DISCORD_ID;
+        const token = process.env.DISCORD_TOKEN;
         
         const webhook = new DiscordJS.WebhookClient(id, token);
         
